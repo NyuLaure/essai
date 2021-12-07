@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const Thing = require("./models/thing");
+const Thing = require("../models/Thing");
 
 router.post("/api/sauces", (req, res, next) => {
   const thing = new Thing({

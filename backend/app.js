@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 const mongoose = require("mongoose");
 
-const Thing = require("./models/thing");
+const Thing = require("./models/Thing");
 
 const saucesRoutes = require("./routes/sauces");
 
@@ -52,7 +52,6 @@ app.get("/api/sauces", (req, res, next) => {
   ];
   res.status(200).json(sauces);
 });
-
 app.use("/api/sauces", (req, res, next) => {
   Thing.find()
     .then((things) => res.status(200).json(things))
